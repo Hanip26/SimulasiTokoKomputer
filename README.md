@@ -5,9 +5,9 @@
 Aplikasi ini dibangun menggunakan konsep Object-Oriented Programming (OOP) dan didukung multithreading untuk mensimulasikan proses toko yang berjalan secara paralel dan dinamis.
 
 Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
-- Menggunakan **GUI** sebagai antarmuka utama
-- Mengimplementasikan **2 materi sebelum UTS**
-- Mengimplementasikan **1 materi setelah UTS (non-GUI)**
+- Menggunakan GUI sebagai antarmuka utama
+- Mengimplementasikan 2 materi sebelum UTS
+- Mengimplementasikan 1 materi setelah UTS (non-GUI)
 
 ## 📂 Struktur Program
 <pre>src/
