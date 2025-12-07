@@ -9,6 +9,66 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
 - Mengimplementasikan **2 materi sebelum UTS**
 - Mengimplementasikan **1 materi setelah UTS (non-GUI)**
 
+## 📂 Struktur Program
+src/
+└── simulasi/tokokomputer/
+    ├── model/
+    │   ├── Komponen.java
+    │   ├── CPU.java
+    │   ├── GPU.java
+    │   ├── RAM.java
+    │   ├── Storage.java
+    │   ├── PowerSupply.java
+    │   ├── Motherboard.java
+    │   ├── PC.java
+    │   └── Pesanan.java
+    │
+    ├── builder/
+    │   ├── PCBuilderController.java
+    │   ├── KompatibilitasChecker.java
+    │   └── IncompatibleComponentException.java
+    │
+    ├── inventory/
+    │   ├── Inventaris.java
+    │   └── StokTidakCukupException.java
+    │
+    ├── order/
+    │   ├── OrderManager.java
+    │   └── StatusPesanan.java
+    │
+    ├── simulation/
+    │   ├── SimulatorEngine.java
+    │   ├── SupplierSimulator.java
+    │   └── MarketDemandSimulator.java
+    │
+    └── ui/
+        ├── MainDashboard.java
+        ├── PCConfiguratorPanel.java
+        ├── TabelInventarisPanel.java
+        ├── TabelPesananMenungguPanel.java
+        └── TabelPesananSiapRakitPanel.java
+        
+**Model**
+Berisi class–class yang merepresentasikan data utama:
+komponen PC, PC rakitan, dan pesanan.
+
+**Builder**
+Mengatur proses perakitan PC serta pengecekan kompatibilitas
+antar komponen.
+
+**Inventory**
+Mengelola stok komponen di toko beserta pengecekan ketersediaan stok.
+
+**Order**
+Mengelola daftar pesanan, status pesanan, dan alur perpindahan status.
+
+**Simulation**
+Mengatur logika simulasi yang berjalan paralel (multithreading),
+seperti pemasok dan permintaan pasar.
+
+**Ui**
+Mengatur tampilan GUI aplikasi (dashboard, tabel inventaris, tabel pesanan,
+dan panel konfigurasi PC). MainDashboard.java menjadi entry point aplikasi.
 ---
 
 ## ▶️ Cara Menjalankan Project
@@ -20,6 +80,102 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
 
 <img width="1919" height="1014" alt="Screenshot 2025-12-06 223523" src="https://github.com/user-attachments/assets/83e7d418-adfe-4beb-b643-0c51164db472" />
 
+## ⚙️ Fitur Utama Program
+
+1. 🧩 **Konfigurasi PC Rakitan**
+   - Memilih komponen PC (CPU, Motherboard, RAM, GPU, Storage, PSU).
+   - Menampilkan ringkasan konfigurasi rakitan.
+   - Mengecek kompatibilitas komponen sebelum dibuat pesanan.
+
+2. 📦 **Manajemen Inventaris Komponen**
+   - Menyimpan dan menampilkan stok komponen yang tersedia di toko.
+   - Stok otomatis berkurang ketika pesanan diproses.
+   - Stok dapat bertambah melalui simulasi pemasok (supplier).
+
+3. 📑 **Manajemen Pesanan Pelanggan**
+   - Membuat pesanan berdasarkan konfigurasi PC yang dipilih.
+   - Mengelola status pesanan:
+     - `MENUNGGU_KOMPONEN`
+     - `SIAP_DIRAKIT`
+     - `SELESAI` (opsional, tergantung implementasi)
+   - Menampilkan daftar pesanan menunggu dan siap dirakit dalam bentuk tabel.
+
+4. 🔄 **Simulasi Dinamis dengan Multithreading**
+   - **SupplierSimulator**: menambah stok komponen secara berkala.
+   - **MarketDemandSimulator**: mengurangi stok komponen sebagai simulasi permintaan pasar.
+   - **OrderChecker / SimulatorEngine**: mengecek pesanan secara periodik dan mengubah status jika stok mencukupi.
+
+5. 🖥️ **Dashboard GUI Interaktif**
+   - Tampilan terpusat untuk konfigurasi PC, inventaris, dan pesanan.
+   - Tombol **Start Simulation** dan **Stop Simulation** untuk mengontrol jalannya simulasi.
+   - Fitur **refresh / auto-refresh** agar tampilan tabel selalu update.
+
+6. 🔐 **Pengecekan Error & Validasi**
+   - Pengecekan kompatibilitas komponen sebelum pesanan dibuat.
+   - Penanganan kasus stok tidak mencukupi saat pesanan diproses (menggunakan exception / logika validasi).
+
+**Flowchart TD **
+
+    %% START
+    A([Start Program]) --> B[Inisialisasi Data & Objek]
+    B --> C[Inisialisasi Inventaris Komponen]
+    C --> D[Inisialisasi OrderManager & List Pesanan]
+    D --> E[Inisialisasi GUI MainDashboard]
+
+    E --> F{User Klik\nStart Simulation?}
+    F -- Tidak --> E
+    F -- Ya --> G[SimulatorEngine\nMenyalakan Thread]
+
+    G --> H[SupplierSimulator:\nMenambah stok berkala]
+    G --> I[MarketDemandSimulator:\nMengurangi stok (permintaan)]
+    G --> J[OrderChecker:\nCek pesanan & status]
+
+    %% USER CONFIGURASI PC
+    E --> K{User Buka Panel\nKonfigurasi PC?}
+    K -- Tidak --> E
+    K -- Ya --> L[User Pilih\nCPU, MB, RAM, GPU,\nStorage, PSU]
+
+    L --> M{Klik\nCek Kompatibilitas?}
+    M -- Ya --> N{Kompatibel?}
+    N -- Tidak --> O[Tampilkan pesan\ntidak kompatibel] --> L
+    N -- Ya --> P[Tampilkan ringkasan\nrakitan valid]
+
+    P --> Q{Klik\nBuat Pesanan?}
+    Q -- Tidak --> E
+    Q -- Ya --> R[Membuat objek Pesanan\nStatus = MENUNGGU_KOMPONEN]
+    R --> S[Pesanan disimpan\ndi OrderManager]
+    S --> T[GUI update tabel\nPesanan Menunggu]
+
+    %% SIMULASI MEMPENGARUHI PESANAN
+    H --> U[Stok bertambah\n(di Inventaris)]
+    I --> V[Stok berkurang\n(di Inventaris)]
+
+    U --> W[OrderChecker:\nCek tiap Pesanan]
+    V --> W
+
+    W --> X{Stok cukup\nuntuk 1 Pesanan?}
+    X -- Tidak --> Y[Status tetap\nMENUNGGU_KOMPONEN]
+    X -- Ya --> Z[Ubah status\nSIAP_DIRAKIT]
+    Z --> AA[GUI update:\nPesanan pindah ke\ntabel SIAP DIRAKIT]
+
+    %% STOP SIM
+    E --> AB{User Klik\nStop Simulation?}
+    AB -- Ya --> AC[SimulatorEngine\nMematikan semua thread]
+    AC --> AD([End / Keluar Program])
+    
+## 🔄 Alur Singkat Program
+
+1. Program dijalankan dan melakukan inisialisasi data, meliputi inventaris komponen, manajemen pesanan, serta tampilan GUI utama.
+2. User mengontrol jalannya simulasi melalui tombol **Start Simulation** dan **Stop Simulation**.
+3. Saat simulasi berjalan, sistem menjalankan beberapa proses paralel:
+   - Pemasok menambah stok komponen secara berkala.
+   - Permintaan pasar mengurangi stok komponen tertentu.
+   - Sistem mengecek ketersediaan stok untuk setiap pesanan.
+4. User melakukan konfigurasi PC dengan memilih komponen yang diinginkan.
+5. Sistem melakukan pengecekan kompatibilitas komponen sebelum pesanan dibuat.
+6. Jika konfigurasi valid, user dapat membuat pesanan dengan status **MENUNGGU_KOMPONEN**.
+7. Ketika stok komponen mencukupi, sistem otomatis mengubah status pesanan menjadi **SIAP_DIRAKIT** dan memperbarui tampilan tabel di GUI.
+8. Seluruh perubahan data ditampilkan secara real-time pada dashboard aplikasi.
 
 ## 🎨 Penjelasan GUI yang Digunakan
 GUI dibuat menggunakan **Java Swing**, dengan komponen utama:
