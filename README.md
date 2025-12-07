@@ -49,28 +49,26 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
         └── TabelPesananSiapRakitPanel.java
 </pre>
 
-**Model**
-Berisi class–class yang merepresentasikan data utama:
-komponen PC, PC rakitan, dan pesanan.
+## 📁 Penjelasan Singkat Package
 
-**Builder**
-Mengatur proses perakitan PC serta pengecekan kompatibilitas
-antar komponen.
+- **package `model`**  
+  Berisi class–class data utama, seperti komponen PC (`CPU`, `GPU`, `RAM`, dll.), `PC`, dan `Pesanan`. Package ini fokus pada representasi objek di dalam sistem.
 
-**Inventory**
-Mengelola stok komponen di toko beserta pengecekan ketersediaan stok.
+- **package `builder`**  
+  Mengatur logika perakitan PC dan pengecekan kompatibilitas komponen. Di sini terdapat controller perakitan dan exception jika konfigurasi tidak cocok.
 
-**Order**
-Mengelola daftar pesanan, status pesanan, dan alur perpindahan status.
+- **package `inventory`**  
+  Mengelola inventaris komponen toko: data stok, penambahan/pengurangan stok, serta pengecekan ketersediaan komponen.
 
-**Simulation**
-Mengatur logika simulasi yang berjalan paralel (multithreading),
-seperti pemasok dan permintaan pasar.
+- **package `order`**  
+  Mengurus manajemen pesanan, mulai dari pembuatan pesanan, daftar pesanan, hingga perubahan status pesanan (menunggu komponen, siap dirakit, selesai).
 
-**Ui**
-Mengatur tampilan GUI aplikasi (dashboard, tabel inventaris, tabel pesanan,
-dan panel konfigurasi PC). MainDashboard.java menjadi entry point aplikasi.
----
+- **package `simulation`**  
+  Menangani simulasi proses toko yang berjalan otomatis menggunakan multithreading, seperti simulasi pemasok dan permintaan pasar.
+
+- **package `ui`**  
+  Berisi seluruh tampilan **GUI** aplikasi, mulai dari `MainDashboard` hingga panel-panel tabel dan konfigurasi PC. Package ini menjadi antarmuka utama yang digunakan pengguna.
+
 
 ## ▶️ Cara Menjalankan Project
 1. Pastikan **Java JDK** sudah terinstal.
