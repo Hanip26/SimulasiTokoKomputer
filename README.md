@@ -10,7 +10,7 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
 - Mengimplementasikan **1 materi setelah UTS (non-GUI)**
 
 ## 📂 Struktur Program
-src/
+<pre>src/
 └── simulasi/tokokomputer/
     ├── model/
     │   ├── Komponen.java
@@ -47,7 +47,8 @@ src/
         ├── TabelInventarisPanel.java
         ├── TabelPesananMenungguPanel.java
         └── TabelPesananSiapRakitPanel.java
-        
+</pre>
+
 **Model**
 Berisi class–class yang merepresentasikan data utama:
 komponen PC, PC rakitan, dan pesanan.
@@ -114,7 +115,7 @@ dan panel konfigurasi PC). MainDashboard.java menjadi entry point aplikasi.
    - Pengecekan kompatibilitas komponen sebelum pesanan dibuat.
    - Penanganan kasus stok tidak mencukupi saat pesanan diproses (menggunakan exception / logika validasi).
 
-**Flowchart TD **
+**Flowchart TD**
 
     %% START
     A([Start Program]) --> B[Inisialisasi Data & Objek]
