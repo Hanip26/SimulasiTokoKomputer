@@ -114,53 +114,7 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
    - Penanganan kasus stok tidak mencukupi saat pesanan diproses (menggunakan exception / logika validasi).
 
 **Flowchart TD**
-
-    %% START
-    A([Start Program]) --> B[Inisialisasi Data & Objek]
-    B --> C[Inisialisasi Inventaris Komponen]
-    C --> D[Inisialisasi OrderManager & List Pesanan]
-    D --> E[Inisialisasi GUI MainDashboard]
-
-    E --> F{User Klik\nStart Simulation?}
-    F -- Tidak --> E
-    F -- Ya --> G[SimulatorEngine\nMenyalakan Thread]
-
-    G --> H[SupplierSimulator:\nMenambah stok berkala]
-    G --> I[MarketDemandSimulator:\nMengurangi stok (permintaan)]
-    G --> J[OrderChecker:\nCek pesanan & status]
-
-    %% USER CONFIGURASI PC
-    E --> K{User Buka Panel\nKonfigurasi PC?}
-    K -- Tidak --> E
-    K -- Ya --> L[User Pilih\nCPU, MB, RAM, GPU,\nStorage, PSU]
-
-    L --> M{Klik\nCek Kompatibilitas?}
-    M -- Ya --> N{Kompatibel?}
-    N -- Tidak --> O[Tampilkan pesan\ntidak kompatibel] --> L
-    N -- Ya --> P[Tampilkan ringkasan\nrakitan valid]
-
-    P --> Q{Klik\nBuat Pesanan?}
-    Q -- Tidak --> E
-    Q -- Ya --> R[Membuat objek Pesanan\nStatus = MENUNGGU_KOMPONEN]
-    R --> S[Pesanan disimpan\ndi OrderManager]
-    S --> T[GUI update tabel\nPesanan Menunggu]
-
-    %% SIMULASI MEMPENGARUHI PESANAN
-    H --> U[Stok bertambah\n(di Inventaris)]
-    I --> V[Stok berkurang\n(di Inventaris)]
-
-    U --> W[OrderChecker:\nCek tiap Pesanan]
-    V --> W
-
-    W --> X{Stok cukup\nuntuk 1 Pesanan?}
-    X -- Tidak --> Y[Status tetap\nMENUNGGU_KOMPONEN]
-    X -- Ya --> Z[Ubah status\nSIAP_DIRAKIT]
-    Z --> AA[GUI update:\nPesanan pindah ke\ntabel SIAP DIRAKIT]
-
-    %% STOP SIM
-    E --> AB{User Klik\nStop Simulation?}
-    AB -- Ya --> AC[SimulatorEngine\nMematikan semua thread]
-    AC --> AD([End / Keluar Program])
+<img width="3695" height="4723" alt="flowchart PBO" src="https://github.com/user-attachments/assets/91dfa8bd-df37-4760-bba0-84193965e083" />
     
 ## 🔄 Alur Singkat Program
 
