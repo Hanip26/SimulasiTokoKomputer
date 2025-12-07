@@ -113,7 +113,7 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
    - Pengecekan kompatibilitas komponen sebelum pesanan dibuat.
    - Penanganan kasus stok tidak mencukupi saat pesanan diproses (menggunakan exception / logika validasi).
 
-**Flowchart TD**
+# 🗺️**Flowchart**
 <img width="3695" height="4723" alt="flowchart PBO" src="https://github.com/user-attachments/assets/91dfa8bd-df37-4760-bba0-84193965e083" />
     
 ## 🔄 Alur Singkat Program
