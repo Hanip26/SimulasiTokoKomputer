@@ -74,7 +74,7 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
 1. Pastikan **Java JDK** sudah terinstal.
 2. Clone atau download repository ini.
 3. Buka project menggunakan **NetBeans / IntelliJ IDEA / VS Code**.
-4. Jalankan file utama:
+4. Jalankan file utama: **MainDashboard.java**
 5. Aplikasi akan berjalan dan menampilkan GUI Simulasi Toko Komputer.
 
 <img width="1919" height="1014" alt="Screenshot 2025-12-06 223523" src="https://github.com/user-attachments/assets/83e7d418-adfe-4beb-b643-0c51164db472" />
