@@ -183,3 +183,11 @@ Screenshot hasil program meliputi:
 
 📌 
 <img width="1919" height="1016" alt="Screenshot 2025-12-06 224108" src="https://github.com/user-attachments/assets/e27feb26-265b-408d-8f96-8b70194dd413" />
+
+## 👨‍💻 Pembagian Tugas
+Anggota kelompok:
+| NIM | Nama |
+| :--- | :--- |
+| L0324010 | Daffa Arkhan Aditama |
+| L0324016 | Hanief Fahrel Wilianto |
+| L0324022 | Muhammad Affan Nur Zhafariza |
