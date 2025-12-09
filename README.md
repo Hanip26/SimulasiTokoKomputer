@@ -347,10 +347,12 @@ Screenshot hasil program meliputi:
 📌 
 <img width="1919" height="1016" alt="Screenshot 2025-12-06 224108" src="https://github.com/user-attachments/assets/e27feb26-265b-408d-8f96-8b70194dd413" />
 
-## 👨‍💻 Pembagian Tugas
-Anggota kelompok:
-| NIM | Nama |
-| :--- | :--- |
-| L0324010 | Daffa Arkhan Aditama |
-| L0324016 | Hanief Fahrel Wilianto |
-| L0324022 | Muhammad Affan Nur Zhafariza |
+## 👨‍💻 Pembagian Tugas Anggota Kelompok
+
+Pembagian tugas dalam pengembangan program **Simulasi Toko Komputer Cerdas – PC Builder Pro** dilakukan secara terstruktur agar setiap anggota berkontribusi sesuai peran masing-masing.
+
+| NIM | Nama | Peran dan Kontribusi |
+|----|------|----------------------|
+| **L0324010** | **Daffa Arkhan Aditama** | Mengembangkan ide dan tema utama program, menyusun flowchart alur sistem, mengimplementasikan fitur pada package **simulation** dan **ui**, serta melakukan penambahan dan perapihan isi pada file README.md. |
+| **L0324016** | **Hanief Fahrel Wilianto** | Merancang dan mengimplementasikan algoritma inti program, mengembangkan class pada package **model** dan **order**, melakukan pengelolaan repository termasuk upload source code ke GitHub, serta menyusun struktur awal file README.md. |
+| **L0324022** | **Muhammad Affan Nur Zhafariza** | Menyediakan perangkat awal sebagai dasar pengembangan program, merancang struktur kode sejak tahap awal, mengimplementasikan fitur pada package **builder** dan **inventory**, serta menambahkan dan melengkapi dokumentasi pada README.md. |
