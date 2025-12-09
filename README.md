@@ -349,10 +349,10 @@ Screenshot hasil program meliputi:
 
 ## 👨‍💻 Pembagian Tugas Anggota Kelompok
 
-Pembagian tugas dalam pengembangan program **Simulasi Toko Komputer Cerdas – PC Builder Pro** dilakukan secara terstruktur agar setiap anggota berkontribusi sesuai peran dan tanggung jawab masing-masing.
+Pembagian tugas dalam pengembangan program **Simulasi Toko Komputer Cerdas – PC Builder Pro** dilakukan secara terstruktur agar setiap anggota berkontribusi sesuai dengan peran masing-masing.
 
 | NIM | Nama | Peran dan Kontribusi |
 |----|------|----------------------|
-| **L0324010** | **Daffa Arkhan Aditama** | Mengembangkan ide dan tema utama program, menyusun flowchart alur sistem, mengimplementasikan fitur pada package **simulation** dan **ui**, melakukan revisi serta perbaikan bug atau error pada kode dan program, serta menambahkan dan merapikan isi dokumentasi pada file **README.md**. |
-| **L0324016** | **Hanief Fahrel Wilianto** | Merancang dan mengimplementasikan algoritma inti program, mengembangkan class pada package **model** dan **order**, melakukan pengelolaan repository termasuk upload source code ke GitHub, serta menyusun struktur awal file **README.md**. |
-| **L0324022** | **Muhammad Affan Nur Zhafariza** | Menyediakan perangkat awal sebagai dasar pengembangan program, merancang struktur kode sejak tahap awal, mengimplementasikan fitur pada package **builder** dan **inventory**, serta menambahkan dan melengkapi dokumentasi pada **README.md**. |
+| **L0324010** | **Daffa Arkhan Aditama** | Mengembangkan ide dan tema utama program, menyusun flowchart alur sistem, mengimplementasikan fitur pada package **simulation** dan **ui**, menyusun dan menata tampilan antarmuka (UI), melakukan revisi serta perbaikan bug atau error pada kode dan program, serta menambahkan dan merapikan isi dokumentasi pada file README.md. |
+| **L0324016** | **Hanief Fahrel Wilianto** | Merancang dan mengimplementasikan algoritma inti program, mengembangkan class pada package **model** dan **order**, melakukan pengelolaan repository termasuk upload source code ke GitHub, serta menyusun struktur awal file README.md. |
+| **L0324022** | **Muhammad Affan Nur Zhafariza** | Menyediakan perangkat awal sebagai dasar pengembangan program, merancang struktur kode sejak tahap awal, mengimplementasikan fitur pada package **builder** dan **inventory**, serta menambahkan dan melengkapi dokumentasi pada README.md. |
