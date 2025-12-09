@@ -114,6 +114,7 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
    - Penanganan kasus stok tidak mencukupi saat pesanan diproses (menggunakan exception / logika validasi).
 
 # 🗺️**Flowchart**
+
 <img width="3695" height="4723" alt="flowchart PBO" src="https://github.com/user-attachments/assets/91dfa8bd-df37-4760-bba0-84193965e083" />
     
 ## 🔄 Alur Singkat Program
@@ -276,28 +277,63 @@ Menampilkan:
 ---
 
 ## 📘 Materi Sebelum UTS yang Diimplementasikan
+
 ### 1️⃣ Object-Oriented Programming (OOP)
-Penerapan OOP meliputi:
-- **Class & Object** → `PC`, `Komponen`, `CPU`, `GPU`, `Pesanan`
-- **Inheritance** → komponen PC merupakan turunan dari class `Komponen`
-- **Polymorphism** → berbagai jenis komponen diproses dalam satu koleksi
-- **Constructor & Method** → inisialisasi dan operasi objek
+
+Konsep **Object-Oriented Programming (OOP)** diterapkan secara nyata dan menyeluruh dalam perancangan struktur program. Implementasi OOP terlihat pada beberapa aspek berikut:
+
+- **Class & Object**  
+  Program menggunakan banyak class sebagai representasi objek di dunia nyata, seperti `PC`, `Komponen`, `CPU`, `GPU`, `RAM`, `Storage`, `PowerSupply`, dan `Pesanan`.  
+  Setiap pesanan dan konfigurasi PC direpresentasikan sebagai objek yang memiliki atribut dan perilaku masing-masing.
+
+- **Inheritance (Pewarisan)**  
+  Seluruh komponen PC diturunkan dari class induk `Komponen`.  
+  Class turunan seperti `CPU`, `GPU`, `RAM`, `Storage`, dan `PowerSupply` mewarisi atribut umum (nama, stok, spesifikasi) dari class `Komponen`, sehingga mengurangi duplikasi kode dan meningkatkan keteraturan struktur program.
+
+- **Polymorphism**  
+  Berbagai jenis komponen PC diproses secara polimorfik melalui referensi bertipe `Komponen`.  
+  Dengan pendekatan ini, sistem dapat mengelola beragam komponen berbeda dalam satu koleksi tanpa perlu membedakan tipe spesifiknya secara manual.
+
+- **Constructor & Method**  
+  Setiap class memiliki constructor untuk inisialisasi data objek serta method untuk menjalankan operasi tertentu, seperti perhitungan daya, pengecekan kompatibilitas, pengurangan stok, dan pengelolaan status pesanan.
+
+Penerapan OOP ini membuat program bersifat modular, mudah dikembangkan, dan sesuai dengan prinsip pemrograman berorientasi objek.
+
+---
 
 ### 2️⃣ Array dan Collection
-- `ArrayList` digunakan untuk menyimpan daftar komponen dan pesanan
-- `Map / HashMap` digunakan untuk pengelolaan inventaris dan stok
-- Collection mempermudah pengolahan data secara dinamis
+
+Materi **Array dan Collection** digunakan untuk menyimpan dan mengelola data secara dinamis selama simulasi berlangsung, antara lain:
+
+- **ArrayList**  
+  Digunakan untuk menyimpan daftar komponen PC dan daftar pesanan pelanggan.  
+  Struktur ini memungkinkan penambahan dan penghapusan data secara fleksibel seiring berjalannya simulasi.
+
+- **Map / HashMap**  
+  Digunakan pada sistem inventaris untuk memetakan nama atau jenis komponen dengan jumlah stok yang tersedia.  
+  Struktur ini mempermudah proses pencarian, pengurangan, dan penambahan stok komponen secara efisien.
+
+Penggunaan collection memberikan kemudahan dalam pengolahan data dan mendukung perubahan data yang bersifat dinamis selama simulasi berjalan.
 
 ---
 
 ## 📕 Materi Setelah UTS (Non-GUI)
-### ✅ Multithreading
-Multithreading digunakan untuk simulasi proses toko secara paralel, meliputi:
-- **SupplierSimulator** → menambah stok komponen secara berkala
-- **MarketDemandSimulator** → mensimulasikan permintaan pasar
-- **SimulatorEngine** → menjalankan dan mengatur beberapa thread sekaligus
 
-Materi ini dijalankan sebagai proses logika program tanpa bergantung langsung pada GUI.
+### ✅ Multithreading
+
+Materi **Multithreading** diimplementasikan sebagai bagian dari logika inti program dan berjalan secara independen dari GUI. Multithreading digunakan untuk mensimulasikan kondisi toko komputer yang aktif dan dinamis.
+
+Implementasi multithreading meliputi:
+
+- **SupplierSimulator**  
+  Berjalan sebagai thread terpisah yang bertugas menambah stok komponen secara berkala, mensimulasikan proses suplai dari pemasok.
+
+- **MarketDemandSimulator**  
+  Mensimulasikan permintaan pasar dengan mengurangi stok komponen tertentu secara periodik, sehingga stok tidak bersifat statis.
+
+- **SimulatorEngine**  
+  Berperan sebagai pengelola utama yang menjalankan dan mengatur beberapa thread sekaligus, termasuk pengecekan pesanan yang menunggu komponen.  
+  Engine ini bertugas mengubah status pesanan dari **MENUNGGU_KOMPONEN** menjadi **SIAP_DIRAKIT** ketika seluruh kebutuhan komponen telah terpenuhi.
 
 ---
 
