@@ -138,13 +138,140 @@ GUI dibuat menggunakan **Java Swing**, dengan komponen utama:
 - `JButton` untuk kontrol simulasi (Start, Stop, Refresh)
 - `JLabel`, `JList`, dan `JScrollPane` sebagai elemen pendukung
 
-Tampilan GUI terdiri dari:
-- **Panel Konfigurasi PC**
-- **Panel Inventaris Komponen**
-- **Panel Pesanan Menunggu & Pesanan Siap Dirakit**
-- **Panel Kontrol Simulasi**
+Tampilan GUI:
 
-GUI diperbarui otomatis menggunakan **Timer** sehingga perubahan data ditampilkan secara real-time.
+<img width="1919" height="1017" alt="Screenshot 2025-12-09 161551" src="https://github.com/user-attachments/assets/234ab12f-2476-48b7-9e36-233be4bf58af" />
+
+## 1️⃣ Bagian Header & Kontrol Simulasi (Bagian Atas)
+
+### 🔘 Tombol **Start Simulation**
+**Fungsi:**
+- Menjalankan mesin simulasi toko komputer.
+- Mengaktifkan proses multithreading, meliputi:
+  - **Supplier Simulator** sebagai penambah stok komponen.
+  - **Market Demand Simulator** sebagai pengurang stok (simulasi permintaan pasar).
+  - **Order Checker / Simulator Engine** untuk mengecek status pesanan.
+- Perubahan stok inventaris dan status pesanan terjadi secara otomatis.
+
+📌 Saat tombol ini ditekan, sistem berjalan secara **real-time** tanpa intervensi pengguna.
+
+---
+
+### 🔴 Tombol **Stop Simulation**
+**Fungsi:**
+- Menghentikan seluruh proses simulasi yang sedang berjalan.
+- Semua thread multithreading dihentikan secara aman.
+- Digunakan untuk mengontrol jalannya simulasi agar tidak berjalan terus-menerus.
+
+---
+
+### 🔄 Tombol **Refresh**
+**Fungsi:**
+- Memperbarui tampilan data pada GUI secara manual.
+- Digunakan untuk memastikan data inventaris dan pesanan selalu sinkron dengan kondisi sistem terbaru.
+
+---
+
+## 2️⃣ Panel Kiri – Konfigurasi PC (*PC Builder Pro*)
+
+Panel ini berfungsi sebagai **modul perakitan PC virtual**, tempat pengguna menentukan spesifikasi PC yang akan dirakit.
+
+### 📌 Dropdown Pilihan Komponen
+Setiap dropdown berfungsi untuk memilih komponen PC sebagai berikut:
+
+| Komponen       | Fungsi |
+|---------------|--------|
+| CPU           | Memilih prosesor |
+| Motherboard   | Memilih motherboard sesuai socket dan chipset |
+| RAM           | Menentukan kapasitas serta kecepatan RAM |
+| GPU           | Memilih kartu grafis |
+| Storage       | Memilih media penyimpanan |
+| Power Supply  | Menentukan PSU beserta kapasitas daya |
+
+✅ Seluruh pilihan komponen terhubung langsung dengan sistem **pengecekan kompatibilitas**.
+
+---
+
+### 🔘 Tombol **Preview Build**
+**Fungsi:**
+- Menampilkan ringkasan konfigurasi PC yang telah dipilih.
+- Tidak memengaruhi data sistem (hanya bersifat pratinjau).
+
+---
+
+### 🔘 Tombol **Cek Kompatibilitas**
+**Fungsi:**
+- Memeriksa kesesuaian konfigurasi PC, meliputi:
+  - Kesesuaian socket antara CPU dan motherboard.
+  - Batas maksimum RAM yang didukung motherboard.
+  - Kecukupan daya PSU terhadap total kebutuhan sistem.
+- Jika konfigurasi tidak valid, sistem akan menampilkan error atau exception.
+
+---
+
+### 🔘 Tombol **Buat Pesanan**
+**Fungsi:**
+- Membuat objek **Pesanan** baru berdasarkan konfigurasi PC.
+- Status awal pesanan adalah **MENUNGGU_KOMPONEN**.
+- Pesanan akan masuk ke sistem order dan menunggu stok komponen terpenuhi.
+
+---
+
+## 3️⃣ Panel Tengah – Ringkasan Konfigurasi
+
+### 📄 Ringkasan PC Saat Ini
+Panel ini menampilkan detail konfigurasi PC yang sedang dipilih, meliputi:
+- CPU beserta spesifikasinya
+- Motherboard dan socket
+- RAM (kapasitas dan kecepatan)
+- GPU
+- Storage
+- Power Supply
+- Perkiraan kebutuhan daya minimum PSU
+
+📌 Panel ini membantu pengguna melakukan validasi akhir sebelum membuat pesanan.
+
+---
+
+## 4️⃣ Panel Kanan Atas – Inventaris Komponen
+
+### 📦 Tabel Inventaris
+Tabel inventaris menampilkan data berikut:
+- **Nama Komponen**
+- **Stok**
+
+**Fungsi utama:**
+- Menampilkan jumlah stok komponen secara real-time.
+- Stok akan:
+  - Bertambah melalui proses **Supplier Simulator**.
+  - Berkurang akibat **Market Demand Simulator** atau pemrosesan pesanan.
+
+✅ Panel ini terhubung langsung dengan kelas `Inventaris.java`.
+
+---
+
+## 5️⃣ Panel Kanan Bawah – Manajemen Pesanan
+
+### 📑 Tab **Pesanan Menunggu Komponen**
+Menampilkan:
+- ID Pesanan
+- Status: **MENUNGGU_KOMPONEN**
+
+**Fungsi:**
+- Menyimpan daftar pesanan yang belum dapat dirakit karena stok komponen belum mencukupi.
+
+---
+
+### ✅ Tab **Pesanan Siap Dirakit**
+Menampilkan:
+- ID Pesanan
+- Status: **SIAP_DIRAKIT**
+
+**Fungsi:**
+- Menampilkan pesanan yang sudah memenuhi seluruh kebutuhan komponen.
+- Pesanan berpindah ke tab ini secara otomatis setelah dicek oleh **SimulatorEngine**.
+
+📌 Perpindahan status pesanan terjadi **tanpa input pengguna** (otomatis).
 
 ---
 
