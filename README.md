@@ -92,7 +92,7 @@ Sebelum menjalankan project, pastikan hal berikut sudah terpenuhi:
 
 Terdapat dua cara untuk mendapatkan source code project:
 
-#### a. Clone dari GitHub menggunakan Git
+#### **a. Clone dari GitHub menggunakan Git**
 
 ```bash
 git clone https://github.com/username/simulasi-toko-komputer.git
