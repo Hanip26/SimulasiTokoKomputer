@@ -71,11 +71,32 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
 
 
 ## ▶️ Cara Menjalankan Project
-1. Pastikan **Java JDK** sudah terinstal.
-2. Clone atau download repository ini.
-3. Buka project menggunakan **NetBeans / IntelliJ IDEA / VS Code**.
-4. Jalankan file utama: **MainDashboard.java**
-5. Aplikasi akan berjalan dan menampilkan GUI Simulasi Toko Komputer.
+
+Bagian ini menjelaskan langkah langkah untuk menjalankan program **Simulasi Toko Komputer** mulai dari persiapan lingkungan sampai aplikasi berhasil dibuka.
+
+### 1. Persyaratan Sistem
+
+Sebelum menjalankan project, pastikan hal berikut sudah terpenuhi:
+
+- Java Development Kit (JDK) sudah terinstal  
+  - Disarankan minimal **JDK 8** atau versi yang lebih baru.
+- Sudah terpasang salah satu IDE berikut:
+  - **NetBeans**
+  - **IntelliJ IDEA**
+  - **Visual Studio Code** dengan ekstensi Java
+- Git (opsional, jika ingin clone langsung dari repository)
+
+---
+
+### 2. Mengunduh Source Code
+
+Ada dua cara untuk mendapatkan source code project:
+
+#### a. Clone dari GitHub menggunakan Git
+
+```bash
+git clone https://github.com/username/simulasi-toko-komputer.git
+cd simulasi-toko-komputer
 
 <img width="1919" height="1014" alt="Screenshot 2025-12-06 223523" src="https://github.com/user-attachments/assets/83e7d418-adfe-4beb-b643-0c51164db472" />
 
