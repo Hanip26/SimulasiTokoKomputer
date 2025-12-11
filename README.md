@@ -147,7 +147,7 @@ SimulasiTokoKomputer/src/main/java/ui/MainDashboard.java
 
 ---
 
-<img width="1919" height="1014" alt="Screenshot 2025-12-06 223523" src="https://github.com/user-attachments/assets/83e7d418-adfe-4beb-b643-0c51164db472" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/bba783af-095a-4785-bf27-3c08d7d1331c" />
 
 ## ⚙️ Fitur Utama Program
 
