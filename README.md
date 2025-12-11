@@ -1,11 +1,6 @@
 # 🖥️ Simulasi Toko Komputer
 
-<p>![drsampingkiriSmall](https://github.com/user-attachments/assets/4cab76a2-c87e-41e0-8e49-af93ccba00b0) </p>
-
-<p align="center">
-  <img src="https://img.icons8.com/?size=100&id=4tZDP20Df7W1&format=png&color=000000" width="90">
-</p>
-
+<p> <img src="https://img.shields.io/badge/Java-orange?logo=oracle&logoColor=white"> <img src="https://img.shields.io/badge/Java Swing-blue?logo=java&logoColor=white"> <img src="https://img.shields.io/badge/OOP-green"> <img src="https://img.shields.io/badge/File IO-yellow"> <img src="https://img.shields.io/badge/Custom DSA-red"> </p>
 <p align="center">
   <b>Simulasi Pengelolaan Toko Komputer Berbasis OOP dengan GUI Java</b>
 </p>
