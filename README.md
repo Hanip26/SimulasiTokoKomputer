@@ -142,7 +142,7 @@ Project dapat dibuka menggunakan NetBeans, IntelliJ IDEA, atau Visual Studio Cod
 
 Entry aplikasi berada pada file berikut:
 <pre>
-src/simulasitokokomputer/ui/MainDashboard.java
+src/main/java/simulasitokokomputer/ui/MainDashboard.java
 </pre>
 
 ---
