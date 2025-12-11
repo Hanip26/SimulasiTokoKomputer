@@ -418,7 +418,8 @@ Screenshot hasil program meliputi:
 - Pesanan Menunggu & Pesanan Siap Dirakit
 
 📌 
-<img width="1919" height="1016" alt="Screenshot 2025-12-06 224108" src="https://github.com/user-attachments/assets/e27feb26-265b-408d-8f96-8b70194dd413" />
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1d74b301-5db3-44e0-919c-7d910fc19b0c" />
 
 ## 👨‍💻 Pembagian Tugas Anggota Kelompok
 
