@@ -1,5 +1,7 @@
 # 🖥️ Simulasi Toko Komputer
 
+<p> <img src="https://img.shields.io/badge/Java-orange?logo=oracle&logoColor=white"> <img src="https://img.shields.io/badge/Java Swing-blue?logo=java&logoColor=white"> <img src="https://img.shields.io/badge/OOP-green"> <img src="https://img.shields.io/badge/File IO-yellow"> <img src="https://img.shields.io/badge/Custom DSA-red"> </p>
+
 ## 📌 Deskripsi Project
 **Simulasi Toko Komputer** adalah aplikasi berbasis Java GUI yang mensimulasikan proses kerja sebuah toko komputer, mulai dari konfigurasi PC rakitan, pengelolaan inventaris komponen, hingga manajemen pesanan pelanggan.  
 Aplikasi ini dibangun menggunakan konsep Object-Oriented Programming (OOP) dan didukung multithreading untuk mensimulasikan proses toko yang berjalan secara paralel dan dinamis.
