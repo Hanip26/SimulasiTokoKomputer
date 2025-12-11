@@ -426,11 +426,25 @@ Implementasi multithreading meliputi:
 ---
 
 ## 📸 Screenshots Hasil Program
-Screenshot hasil program meliputi:
-- Tampilan Dashboard Utama
-- Tampilan Konfigurasi PC
-- Inventaris Komponen
-- Pesanan Menunggu & Pesanan Siap Dirakit
+
+Berikut adalah beberapa tampilan utama dari aplikasi **PC Builder Ecosystem Simulator Pro**, yang menunjukkan alur penggunaan serta fitur utama program:
+
+- **Tampilan Dashboard Utama**  
+  Menampilkan tombol kontrol simulasi (Start, Stop, Refresh), status simulasi secara real-time, serta layout utama yang terdiri dari panel konfigurasi PC, inventaris komponen, dan manajemen pesanan.
+
+- **Tampilan Konfigurasi PC & Perhitungan Daya**  
+  Pengguna dapat memilih komponen seperti CPU, motherboard, GPU, RAM, storage, dan power supply. Sistem menampilkan estimasi kebutuhan daya (Power Estimation) beserta persentase penggunaan PSU untuk memastikan kompatibilitas sebelum melakukan pemesanan.
+
+- **Preview Rakitan PC (Popup Ringkasan Build)**  
+  Saat tombol *Preview* ditekan, dialog ringkasan konfigurasi akan muncul berisi daftar komponen yang dipilih beserta estimasi daya total. Fitur ini membantu pengguna melakukan validasi build sebelum proses pemesanan.
+
+- **Inventaris Komponen dengan Status Stok**  
+  Tabel inventaris menampilkan daftar komponen lengkap dengan jumlah stok dan statusnya, seperti **In Stock**, **Low Stock**, atau kondisi lain sesuai simulasi pemasok dan permintaan pasar. Warna indikator mempermudah identifikasi ketersediaan komponen.
+
+- **Manajemen Pesanan (Order Management)**  
+  Pesanan yang dibuat akan muncul pada tab **Waiting** dengan status *MENUNGGU KOMPONEN*. Jika semua komponen tersedia, pesanan otomatis berpindah ke tab **Ready**. Tabel ini juga menampilkan jumlah komponen yang diperlukan untuk setiap pesanan.
+
+Screenshot berikut menunjukkan proses simulasi berjalan dan bagaimana stok serta status pesanan berubah secara dinamis:
 
 📌 
 
