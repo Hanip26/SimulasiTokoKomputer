@@ -90,7 +90,7 @@ Sebelum menjalankan project, pastikan hal berikut sudah terpenuhi:
 
 ### 2. Mengunduh Source Code
 
-Ada dua cara untuk mendapatkan source code project:
+Terdapat dua cara untuk mendapatkan source code project:
 
 #### a. Clone dari GitHub menggunakan Git
 
@@ -107,20 +107,7 @@ cd simulasi-toko-komputer
 
 ---
 
-### 3. Mengunduh Source Code
-
-Cara untuk mendapatkan source code project.
-
-#### **Download sebagai ZIP**
-
-1. Buka repository project pada GitHub.
-2. Klik tombol **Code**.
-3. Pilih **Download ZIP**.
-4. Ekstrak file ZIP ke folder yang diinginkan.
-
----
-
-### 4. Membuka Project di IDE
+### 3. Membuka Project di IDE
 
 Project dapat dibuka menggunakan NetBeans, IntelliJ IDEA, atau Visual Studio Code.
 
@@ -151,7 +138,7 @@ Project dapat dibuka menggunakan NetBeans, IntelliJ IDEA, atau Visual Studio Cod
 
 ---
 
-### 5. Menjalankan Program Utama
+### 4. Menjalankan Program Utama
 
 Entry point aplikasi berada pada file berikut:
 <pre>
