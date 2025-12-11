@@ -5,6 +5,8 @@
   <b>Simulasi Pengelolaan Toko Komputer Berbasis OOP dengan GUI Java</b>
 </p>
 
+<img width="1920" height="1080" alt="tumnail" src="https://github.com/user-attachments/assets/565c9a8f-2482-4417-a4a9-e825bb96c83c" />
+
 <p align="center">
   <i>Aplikasi desktop untuk mengelola data barang komputer, transaksi, dan operasional toko dengan antarmuka interaktif dan alur kerja yang efisien.</i>
 </p>
