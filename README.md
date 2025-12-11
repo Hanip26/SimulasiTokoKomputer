@@ -386,6 +386,8 @@ Penggunaan collection memberikan kemudahan dalam pengolahan data dan mendukung p
 
 ### 1️⃣ Enkapsulasi dan Inheritance
 
+Materi **Enkapsulasi dan Inheritance** digunakan untuk membangun struktur class yang terorganisir, menjaga keamanan data, serta memungkinkan pewarisan atribut dan perilaku antar komponen dalam sistem.
+
 - **Inheritance (Pewarisan)**  
   Struktur komponen PC pada program ini menggunakan pewarisan dari class induk `Komponen`.  
   Class seperti `CPU`, `GPU`, `RAM`, `Storage`, `Motherboard`, dan `PowerSupply` merupakan turunan langsung dari `Komponen`, sehingga seluruh atribut dasar seperti nama komponen, kategori, dan deskripsi diwariskan secara
@@ -397,9 +399,11 @@ Penggunaan collection memberikan kemudahan dalam pengolahan data dan mendukung p
 
 ### 2️⃣ Polimorfisme
 
+Materi **Polimorfisme** diterapkan untuk memproses berbagai jenis komponen PC melalui satu tipe referensi yang sama, sehingga sistem dapat bekerja lebih fleksi.
+
 - **Polymorphism (Polimorfisme)**  
-  Program memanfaatkan polimorfisme dengan memperlakukan seluruh jenis komponen sebagai objek bertipe `Komponen`.  
-  Hal ini memungkinkan berbagai class turunan (`CPU`, `GPU`, `RAM`, dll.) disimpan dalam satu koleksi yang sama seperti `ArrayList<Komponen>`.  
+  Program memanfaatkan polimorfisme dengan memperlakukan seluruh jenis komponen sebagai objek bertipe `Komponen`.  Hal ini memungkinkan berbagai class turunan (`CPU`, `GPU`, `RAM`, dll.) disimpan dalam satu koleksi yang
+  sama seperti `ArrayList<Komponen>`.  
   Ketika sistem melakukan operasi seperti pengecekan kompatibilitas, pengambilan stok, atau menampilkan informasi komponen, method yang dipanggil akan menyesuaikan perilaku sesuai tipe objek sebenarnya melalui mekanisme
   overriding.  
   
