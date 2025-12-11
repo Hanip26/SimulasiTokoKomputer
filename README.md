@@ -288,7 +288,9 @@ Setiap dropdown berfungsi untuk memilih komponen PC sebagai berikut:
 
 ---
 
-## 3️⃣ Panel Tengah – Ringkasan Konfigurasi
+## 3️⃣ Panel Tengah – Ringkasan Konfigurasi PC
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d0b094ee-2f15-449c-9234-11bd79559e02" />
 
 ### 📄 Ringkasan PC Saat Ini
 Panel ini menampilkan detail konfigurasi PC yang sedang dipilih, meliputi:
@@ -308,8 +310,9 @@ Panel ini menampilkan detail konfigurasi PC yang sedang dipilih, meliputi:
 
 ### 📦 Tabel Inventaris
 Tabel inventaris menampilkan data berikut:
-- **Nama Komponen**
-- **Stok**
+- **Component Name**
+- **Stock**
+- **Status**
 
 **Fungsi utama:**
 - Menampilkan jumlah stok komponen secara real-time.
@@ -323,7 +326,7 @@ Tabel inventaris menampilkan data berikut:
 
 ## 5️⃣ Panel Kanan Bawah – Manajemen Pesanan
 
-### 📑 Tab **Pesanan Menunggu Komponen**
+### 📑 Tab **Waiting**
 Menampilkan:
 - ID Pesanan
 - Status: **MENUNGGU_KOMPONEN**
@@ -333,7 +336,7 @@ Menampilkan:
 
 ---
 
-### ✅ Tab **Pesanan Siap Dirakit**
+### ✅ Tab **Ready**
 Menampilkan:
 - ID Pesanan
 - Status: **SIAP_DIRAKIT**
