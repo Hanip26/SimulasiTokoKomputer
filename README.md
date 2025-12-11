@@ -97,6 +97,9 @@ Ada dua cara untuk mendapatkan source code project:
 ```bash
 git clone https://github.com/username/simulasi-toko-komputer.git
 cd simulasi-toko-komputer
+```
+
+---
 
 <img width="1919" height="1014" alt="Screenshot 2025-12-06 223523" src="https://github.com/user-attachments/assets/83e7d418-adfe-4beb-b643-0c51164db472" />
 
