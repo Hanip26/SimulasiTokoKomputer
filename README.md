@@ -72,32 +72,66 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
 
 ## ▶️ Cara Menjalankan Project
 
-Bagian ini menjelaskan langkah langkah untuk menjalankan program **Simulasi Toko Komputer** mulai dari persiapan lingkungan sampai aplikasi berhasil dibuka.
-
-### 1. Persyaratan Sistem
-
-Sebelum menjalankan project, pastikan hal berikut sudah terpenuhi:
-
-- Java Development Kit (JDK) sudah terinstal  
-  - Disarankan minimal **JDK 8** atau versi yang lebih baru.
-- Sudah terpasang salah satu IDE berikut:
-  - **NetBeans**
-  - **IntelliJ IDEA**
-  - **Visual Studio Code** dengan ekstensi Java
-- Git (opsional, jika ingin clone langsung dari repository)
+Bagian ini menjelaskan langkah langkah untuk menjalankan program **Simulasi Toko Komputer** mulai dari proses download hingga aplikasi berhasil dijalankan.
 
 ---
 
-### 2. Mengunduh Source Code
+### 1. Mengunduh Source Code
 
-Ada dua cara untuk mendapatkan source code project:
+Terdapat dua cara untuk mendapatkan source code project.
 
-#### a. Clone dari GitHub menggunakan Git
+#### **b. Download sebagai ZIP**
 
-```bash
-git clone https://github.com/username/simulasi-toko-komputer.git
-cd simulasi-toko-komputer
-```
+1. Buka repository project pada GitHub.
+2. Klik tombol **Code**.
+3. Pilih **Download ZIP**.
+4. Ekstrak file ZIP ke folder yang diinginkan.
+
+---
+
+### 3. Membuka Project di IDE
+
+Project dapat dibuka menggunakan NetBeans, IntelliJ IDEA, atau Visual Studio Code.
+
+---
+
+### **a. NetBeans**
+
+1. Buka **NetBeans**.
+2. Pilih menu **File → Open Project**.
+3. Arahkan ke folder project hasil clone atau ekstrak ZIP.
+4. Pilih folder project, lalu klik **Open Project**.
+5. Tunggu hingga NetBeans menyelesaikan proses scanning dan konfigurasi project.
+
+---
+
+### **b. IntelliJ IDEA**
+
+1. Buka **IntelliJ IDEA**.
+2. Pada tampilan awal, pilih **Open**.
+3. Arahkan ke folder project.
+4. Klik **OK**.
+5. Jika muncul pilihan tipe project, pilih **Java Project** (atau **Maven/Gradle** jika project menggunakan build system tersebut).
+6. Tunggu hingga proses indexing selesai dan IDE siap digunakan.
+
+---
+
+### **c. Visual Studio Code**
+
+1. Buka **Visual Studio Code**.
+2. Pilih menu **File → Open Folder**.
+3. Pilih folder project, kemudian klik **Select Folder**.
+4. Pastikan ekstensi **Extension Pack for Java** sudah terinstal.
+5. VS Code akan mendeteksi struktur project Java dan menampilkan file yang dapat dijalankan.
+
+---
+
+### 4. Menjalankan Program Utama
+
+Entry point aplikasi berada pada file berikut:
+<prev/>
+src/simulasi/tokokomputer/ui/MainDashboard.java
+<prev/>
 
 ---
 
