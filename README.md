@@ -390,7 +390,6 @@ Penggunaan collection memberikan kemudahan dalam pengolahan data dan mendukung p
   Struktur komponen PC pada program ini menggunakan pewarisan dari class induk `Komponen`.  
   Class seperti `CPU`, `GPU`, `RAM`, `Storage`, `Motherboard`, dan `PowerSupply` merupakan turunan langsung dari `Komponen`, sehingga seluruh atribut dasar seperti nama komponen, kategori, dan deskripsi diwariskan secara
   otomatis.  
-  Pendekatan ini mengurangi duplikasi kode, menjaga konsistensi struktur data, serta memudahkan penambahan jenis komponen baru tanpa perlu mengubah bagian logika inti program.
 
 - **Enkapsulasi**  
   Setiap class komponen dan class pendukung lainnya menerapkan enkapsulasi melalui penggunaan atribut privat serta menyediakan getter dan setter untuk mengakses nilai atribut tersebut.  
@@ -403,7 +402,6 @@ Penggunaan collection memberikan kemudahan dalam pengolahan data dan mendukung p
   Hal ini memungkinkan berbagai class turunan (`CPU`, `GPU`, `RAM`, dll.) disimpan dalam satu koleksi yang sama seperti `ArrayList<Komponen>`.  
   Ketika sistem melakukan operasi seperti pengecekan kompatibilitas, pengambilan stok, atau menampilkan informasi komponen, method yang dipanggil akan menyesuaikan perilaku sesuai tipe objek sebenarnya melalui mekanisme
   overriding.  
-  Polimorfisme ini membuat sistem lebih fleksibel, mudah diperluas, dan tidak memerlukan logika percabangan untuk membedakan jenis komponen secara manual.
   
 ### 3️⃣ Multithreading
 
