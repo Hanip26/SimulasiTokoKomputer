@@ -11,7 +11,6 @@
   <i>Aplikasi desktop untuk mengelola data barang komputer, transaksi, dan operasional toko dengan antarmuka interaktif dan alur kerja yang efisien.</i>
 </p>
 
-
 ## 📌 Deskripsi Project
 **Simulasi Toko Komputer** adalah aplikasi berbasis Java GUI yang mensimulasikan proses kerja sebuah toko komputer, mulai dari konfigurasi PC rakitan, pengelolaan inventaris komponen, hingga manajemen pesanan pelanggan.  
 Aplikasi ini dibangun menggunakan konsep Object-Oriented Programming (OOP) dan didukung multithreading untuk mensimulasikan proses toko yang berjalan secara paralel dan dinamis.
@@ -20,6 +19,46 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
 - Menggunakan GUI sebagai antarmuka utama
 - Mengimplementasikan 2 materi sebelum UTS
 - Mengimplementasikan 1 materi setelah UTS (non-GUI)
+
+# 🛠️ Tech Stack
+
+## **Core Technologies**
+- **Java 8/11+** – Bahasa pemrograman utama dengan penerapan konsep OOP  
+- **Java Swing** – Framework GUI desktop untuk merancang antarmuka aplikasi  
+- **Object-Oriented Programming** – Inheritance, Polymorphism, Encapsulation, Abstraction  
+
+---
+
+## **UI & Design**
+- **Swing Components (JFrame, JPanel, JTable, JButton, dll.)** – Komponen utama antarmuka  
+- **Layout Managers** – BorderLayout, GridLayout, FlowLayout untuk mengatur tata letak  
+- **Custom Icons** – Ikon untuk mempercantik tampilan menu dan tombol  
+- **Event Handling** – `ActionListener`, `MouseListener`, dan event-event GUI lainnya  
+
+---
+
+## **Data Management**
+- **File I/O (BufferedReader, FileWriter, PrintWriter, Scanner)** – Penyimpanan data barang & transaksi  
+- **Custom Data Structures** – Struktur data buatan sendiri (Array/ArrayList manual, Queue/Stack sederhana, dll.)  
+- **Serialization (opsional)** – Jika objek disimpan langsung  
+- **Data Validation** – Mengecek input agar aplikasi tidak error  
+
+---
+
+## **Testing & Quality**
+- **Manual Testing** – Pengujian fitur GUI, tombol, dan transaksi  
+- **Debugging Tools** – `System.out.println` / log sederhana  
+- **Error Handling** – Validasi input dan try–catch untuk menjaga stabilitas aplikasi  
+
+---
+
+## **Build & Project Structure**
+- `/model` — Kelas OOP seperti Barang, Transaksi, User, Toko  
+- `/view` — Seluruh tampilan GUI (Form Barang, Form Transaksi, Menu Utama)  
+- `/controller` — Logika aplikasi & penghubung antara model dan view  
+- `/data` — File teks tempat penyimpanan data  
+
+---
 
 ## 📂 Struktur Program
 <pre>src/
