@@ -140,9 +140,9 @@ Project dapat dibuka menggunakan NetBeans, IntelliJ IDEA, atau Visual Studio Cod
 
 ### 4. Menjalankan Program Utama
 
-Entry point aplikasi berada pada file berikut:
+Entry aplikasi berada pada file berikut:
 <pre>
-src/simulasi/tokokomputer/ui/MainDashboard.java
+src/simulasitokokomputer/ui/MainDashboard.java
 </pre>
 
 ---
