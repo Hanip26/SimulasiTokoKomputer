@@ -359,14 +359,6 @@ Konsep **Object-Oriented Programming (OOP)** diterapkan secara nyata dan menyelu
   Program menggunakan banyak class sebagai representasi objek di dunia nyata, seperti `PC`, `Komponen`, `CPU`, `GPU`, `RAM`, `Storage`, `PowerSupply`, dan `Pesanan`.  
   Setiap pesanan dan konfigurasi PC direpresentasikan sebagai objek yang memiliki atribut dan perilaku masing-masing.
 
-- **Inheritance (Pewarisan)**  
-  Seluruh komponen PC diturunkan dari class induk `Komponen`.  
-  Class turunan seperti `CPU`, `GPU`, `RAM`, `Storage`, dan `PowerSupply` mewarisi atribut umum (nama, stok, spesifikasi) dari class `Komponen`, sehingga mengurangi duplikasi kode dan meningkatkan keteraturan struktur program.
-
-- **Polymorphism**  
-  Berbagai jenis komponen PC diproses secara polimorfik melalui referensi bertipe `Komponen`.  
-  Dengan pendekatan ini, sistem dapat mengelola beragam komponen berbeda dalam satu koleksi tanpa perlu membedakan tipe spesifiknya secara manual.
-
 - **Constructor & Method**  
   Setiap class memiliki constructor untuk inisialisasi data objek serta method untuk menjalankan operasi tertentu, seperti perhitungan daya, pengecekan kompatibilitas, pengurangan stok, dan pengelolaan status pesanan.
 
@@ -392,7 +384,28 @@ Penggunaan collection memberikan kemudahan dalam pengolahan data dan mendukung p
 
 ## 📕 Materi Setelah UTS (Non-GUI)
 
-### ✅ Multithreading
+### 1️⃣ Enkapsulasi dan Inheritance
+
+- **Inheritance (Pewarisan)**  
+  Struktur komponen PC pada program ini menggunakan pewarisan dari class induk `Komponen`.  
+  Class seperti `CPU`, `GPU`, `RAM`, `Storage`, `Motherboard`, dan `PowerSupply` merupakan turunan langsung dari `Komponen`, sehingga seluruh atribut dasar seperti nama komponen, kategori, dan deskripsi diwariskan secara
+  otomatis.  
+  Pendekatan ini mengurangi duplikasi kode, menjaga konsistensi struktur data, serta memudahkan penambahan jenis komponen baru tanpa perlu mengubah bagian logika inti program.
+
+- **Enkapsulasi**  
+  Setiap class komponen dan class pendukung lainnya menerapkan enkapsulasi melalui penggunaan atribut privat serta menyediakan getter dan setter untuk mengakses nilai atribut tersebut.  
+  Dengan cara ini, integritas data tetap terjaga dan setiap perubahan terhadap objek harus dilakukan melalui method resmi yang sudah disediakan.
+
+### 2️⃣ Polimorfisme
+
+- **Polymorphism (Polimorfisme)**  
+  Program memanfaatkan polimorfisme dengan memperlakukan seluruh jenis komponen sebagai objek bertipe `Komponen`.  
+  Hal ini memungkinkan berbagai class turunan (`CPU`, `GPU`, `RAM`, dll.) disimpan dalam satu koleksi yang sama seperti `ArrayList<Komponen>`.  
+  Ketika sistem melakukan operasi seperti pengecekan kompatibilitas, pengambilan stok, atau menampilkan informasi komponen, method yang dipanggil akan menyesuaikan perilaku sesuai tipe objek sebenarnya melalui mekanisme
+  overriding.  
+  Polimorfisme ini membuat sistem lebih fleksibel, mudah diperluas, dan tidak memerlukan logika percabangan untuk membedakan jenis komponen secara manual.
+  
+### 3️⃣ Multithreading
 
 Materi **Multithreading** diimplementasikan sebagai bagian dari logika inti program dan berjalan secara independen dari GUI. Multithreading digunakan untuk mensimulasikan kondisi toko komputer yang aktif dan dinamis.
 
