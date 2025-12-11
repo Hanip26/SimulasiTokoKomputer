@@ -118,6 +118,8 @@ Cara untuk mendapatkan source code project.
 3. Pilih **Download ZIP**.
 4. Ekstrak file ZIP ke folder yang diinginkan.
 
+---
+
 ### 4. Membuka Project di IDE
 
 Project dapat dibuka menggunakan NetBeans, IntelliJ IDEA, atau Visual Studio Code.
