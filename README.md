@@ -211,7 +211,7 @@ GUI dibuat menggunakan **Java Swing**, dengan komponen utama:
 
 Tampilan GUI:
 
-<img width="1919" height="1017" alt="Screenshot 2025-12-09 161551" src="https://github.com/user-attachments/assets/234ab12f-2476-48b7-9e36-233be4bf58af" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/88ef02d5-eec4-46d6-ba82-4c5dd003fea5" />
 
 ## 1️⃣ Bagian Header & Kontrol Simulasi (Bagian Atas)
 
@@ -263,14 +263,14 @@ Setiap dropdown berfungsi untuk memilih komponen PC sebagai berikut:
 
 ---
 
-### 🔘 Tombol **Preview Build**
+### 🔘 Tombol **Preview**
 **Fungsi:**
 - Menampilkan ringkasan konfigurasi PC yang telah dipilih.
 - Tidak memengaruhi data sistem (hanya bersifat pratinjau).
 
 ---
 
-### 🔘 Tombol **Cek Kompatibilitas**
+### 🔘 Tombol **Check**
 **Fungsi:**
 - Memeriksa kesesuaian konfigurasi PC, meliputi:
   - Kesesuaian socket antara CPU dan motherboard.
@@ -280,7 +280,7 @@ Setiap dropdown berfungsi untuk memilih komponen PC sebagai berikut:
 
 ---
 
-### 🔘 Tombol **Buat Pesanan**
+### 🔘 Tombol **Order**
 **Fungsi:**
 - Membuat objek **Pesanan** baru berdasarkan konfigurasi PC.
 - Status awal pesanan adalah **MENUNGGU_KOMPONEN**.
