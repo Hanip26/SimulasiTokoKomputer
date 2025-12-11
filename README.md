@@ -11,7 +11,7 @@ Project ini dibuat untuk memenuhi tugas pemrograman dengan ketentuan:
 
 ## 📂 Struktur Program
 <pre>src/
-└── simulasi/tokokomputer/
+└── main/java/
     ├── model/
     │   ├── Komponen.java
     │   ├── CPU.java
@@ -142,7 +142,7 @@ Project dapat dibuka menggunakan NetBeans, IntelliJ IDEA, atau Visual Studio Cod
 
 Entry aplikasi berada pada file berikut:
 <pre>
-src/main/java/simulasitokokomputer/ui/MainDashboard.java
+src/main/java/ui/MainDashboard.java
 </pre>
 
 ---
